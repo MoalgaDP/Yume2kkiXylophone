@@ -67,13 +67,19 @@ Note(note)
 }
 
 
+AllModifierKeysUp()
+{
+    Send "{Shift Up}"
+    Send "{z Up}"
+    Send "{x Up}"
+}
+
+
 SuspendScript()
 {
     Key("d", true, true, true)
     Sleep 25
-    Send "{Shift Up}"
-    Send "{z Up}"
-    Send "{x Up}"
+    AllModifierKeysUp()
     Suspend true
 }
 
@@ -81,6 +87,13 @@ SuspendScript()
 UnsuspendScript()
 {
     Suspend false
+}
+
+
+ExitScript()
+{
+    AllModifierKeysUp()
+    ExitApp
 }
 
 
@@ -158,7 +171,7 @@ $*PgDn::SuspendScript()
 
 #SuspendExempt
 $*PgUp::UnsuspendScript()
-$*Esc::ExitApp
+$*Esc::ExitScript()
 #SuspendExempt false
 
 
