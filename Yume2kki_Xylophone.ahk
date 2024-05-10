@@ -53,7 +53,7 @@ Sound(note_id, alt := 0)
         case 21: Key("a", false, true, true)
         case 22: Key("a", true, true, true)
         case 23: Key("w", false, true, true)
-        case 24: Key("d", false, true, true)   ; WIP: support alternative key pattern Key("d", false, true, true) and Key("w", true, true, true)
+        case 24: Key("d", false, true, true)   ; WIP: support alternative key pattern Key("w", true, true, true)
     }
 }
 
